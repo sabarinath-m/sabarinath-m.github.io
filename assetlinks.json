@@ -1,4 +1,7 @@
-[
+---
+layout: none
+permalink: .well-known/assetlinks.json
+---
         {
             "relation": ["delegate_permission/common.handle_all_urls"],
             "target": {
@@ -8,4 +11,3 @@
                 ["60:64:C3:9D:C2:90:27:DD:FA:A6:77:D9:33:8C:E6:7B:ED:55:1A:B1:8A:83:7F:3B:23:7A:F3:30:70:CA:D7:76"]
             }
           }
-  ]
