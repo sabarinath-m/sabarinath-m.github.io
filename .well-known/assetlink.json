@@ -1,11 +1,20 @@
 [
-    {
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "cofee.life.app.dev",
-        "sha256_cert_fingerprints":
-          ["60:64:C3:9D:C2:90:27:DD:FA:A6:77:D9:33:8C:E6:7B:ED:55:1A:B1:8A:83:7F:3B:23:7A:F3:30:70:CA:D7:76"]
-      }
-    }
+        {
+          "relation": ["delegate_permission/common.handle_all_urls"],
+          "target": {
+            "namespace": "android_app",
+            "package_name": "cofee.life.app",
+            "sha256_cert_fingerprints":
+              ["2F:6A:A5:63:8B:AD:5E:8D:F2:65:97:26:D3:6D:80:4F:C6:33:03:69:D0:E5:C4:47:79:63:97:83:8B:E2:81:F0"]
+          }
+        },
+        {
+            "relation": ["delegate_permission/common.handle_all_urls"],
+            "target": {
+              "namespace": "android_app",
+              "package_name": "cofee.life.app.dev",
+              "sha256_cert_fingerprints":
+                ["60:64:C3:9D:C2:90:27:DD:FA:A6:77:D9:33:8C:E6:7B:ED:55:1A:B1:8A:83:7F:3B:23:7A:F3:30:70:CA:D7:76"]
+            }
+          }
   ]
