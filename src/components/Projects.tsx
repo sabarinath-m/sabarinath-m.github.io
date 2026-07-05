@@ -38,7 +38,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Personal Projects"
           title="Things I've built outside of work"
-          description="Grouped by stack — whichever team you're hiring for, there's real, shipped work here to look at."
+          description="Grouped by stack, whichever team you're hiring for, there's real, shipped work here to look at."
         />
 
         <Reveal className="flex flex-wrap gap-2 mb-4">

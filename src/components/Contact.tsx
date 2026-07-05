@@ -16,7 +16,7 @@ export function Contact() {
           Building something? Let's talk.
         </h2>
         <p className="mt-4 text-ink-soft leading-relaxed max-w-xl mx-auto">
-          Whether it's a React frontend, a React Native app, or the Go service behind either one — I'm
+          Whether it's a React frontend, a React Native app, or the Go service behind either one, I'm
           happy to talk through it.
         </p>
 

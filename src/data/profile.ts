@@ -6,7 +6,7 @@ export const profile = {
   title: 'Senior Full-Stack Product Engineer',
   location: 'Kochi, India',
   tagline:
-    "I take products from a blank screen to production — React and React Native on the front end, Go services behind them, and full ownership of everything in between.",
+    "I take products from a blank screen to production. React and React Native on the front end, Go services behind them, and full ownership of everything in between.",
   email: 'sabarinath.m97@gmail.com',
   phone: '+91 98463 60800',
   links: {
@@ -33,12 +33,12 @@ export type Experience = {
 export const experience: Experience = {
   company: 'KeyValue Software Systems',
   role: 'Senior Software Engineer',
-  period: 'Aug 2020 — Present',
+  period: 'Aug 2020 - Present',
   location: 'Kochi, India',
   summary:
-    'Six years as the frontend and, increasingly, full-stack owner across four-plus production products — hired for React, trusted to ship React Native, and extended into Go backend services because the fastest way to unblock a feature was to own the whole path.',
+    'Six years as the frontend and, increasingly, full-stack owner across four-plus production products. Hired for React, trusted to ship React Native, and extended into Go backend services because the fastest way to unblock a feature was to own the whole path.',
   highlights: [
-    'Led React web development across 4+ production products — a seller console for an e-commerce platform at 1M+-user scale, and a dashboard for a FinTech platform serving 15K+ active users and enterprise clients — later extending ownership into Golang REST APIs and PostgreSQL schemas to ship end-to-end without cross-team handoff delays.',
+    'Led React web development across 4+ production products, including a seller console for an e-commerce platform at 1M+-user scale and a dashboard for a FinTech platform serving 15K+ active users and enterprise clients. Later extended ownership into Golang REST APIs and PostgreSQL schemas to ship end-to-end without cross-team handoff delays.',
     'Architected React Native codebases with modular state management and reusable component libraries adopted across 4+ projects, cutting new-project setup time.',
     'Optimised React app performance across browsers and devices through profiling and code-splitting, improving load times for production users.',
     'Engineered high-performance React Native UIs with Reanimated and Gesture Handler, delivering native-quality experiences from a single codebase on Android and iOS.',
@@ -46,7 +46,7 @@ export const experience: Experience = {
     'Built offline-first React Native workflows with local data sync, background tasks, and barcode scanning for field-operations teams.',
     'Built deep linking, push notification, and analytics instrumentation across React and React Native apps, improving engagement and re-engagement in production.',
     'Set up a CodePush-based hotfix pipeline shipping critical React Native fixes to production within minutes, bypassing multi-day app store review cycles.',
-    'Led code reviews and mentored engineers across React, React Native, Flutter, and Golang — set frontend/mobile architecture standards team-wide.',
+    'Led code reviews and mentored engineers across React, React Native, Flutter, and Golang, setting frontend and mobile architecture standards team-wide.',
   ],
 };
 
@@ -65,7 +65,7 @@ export const caseStudies: CaseStudy[] = [
     name: 'E-Commerce Platform',
     scale: '1M+ users',
     description:
-      'Seller console built in React for sellers managing catalog, orders and inventory, plus the React Native merchant and storefront apps sharing UI and business logic with the web console — backed by Golang services I helped ship.',
+      'Seller console built in React for sellers managing catalog, orders and inventory, plus the React Native merchant and storefront apps sharing UI and business logic with the web console, backed by Golang services I helped ship.',
     stack: ['React', 'TypeScript', 'Redux', 'React Native', 'Golang', 'PostgreSQL'],
     emphasis: ['react', 'rn', 'go'],
   },
@@ -83,7 +83,7 @@ export const caseStudies: CaseStudy[] = [
     name: 'D2C Health & Wellness',
     scale: 'Consumer storefront + companion app',
     description:
-      'Conversion-optimised React/Next.js storefront paired with a React Native companion app, tuned for smooth animation and fast checkout — Golang and Firebase Analytics behind both.',
+      'Conversion-optimised React/Next.js storefront paired with a React Native companion app, tuned for smooth animation and fast checkout. Golang and Firebase Analytics run behind both.',
     stack: ['React', 'Next.js', 'React Native', 'Reanimated', 'Golang', 'Firebase Analytics'],
     emphasis: ['react', 'rn'],
   },
@@ -92,7 +92,7 @@ export const caseStudies: CaseStudy[] = [
     name: 'Logistics & Delivery System',
     scale: 'Field-agent operations',
     description:
-      'Offline-first React Native app for field agents — barcode scanning, route management and local sync — talking to high-concurrency Golang services over WebSockets, with a React ops console on top.',
+      'Offline-first React Native app for field agents, with barcode scanning, route management and local sync, talking to high-concurrency Golang services over WebSockets, with a React ops console on top.',
     stack: ['React Native', 'React', 'Golang', 'WebSockets', 'Google Maps SDK', 'PostgreSQL'],
     emphasis: ['rn', 'go', 'react'],
   },
@@ -125,7 +125,7 @@ export const projectTracks: ProjectTrack[] = [
     label: 'React',
     color: 'accent',
     blurb:
-      'Web interfaces — from real-time collaborative tools to the seller/ops consoles listed above.',
+      'Web interfaces, from real-time collaborative tools to the seller/ops consoles listed above.',
     projects: [
       {
         id: 'collaborative-code-editor',
@@ -144,14 +144,14 @@ export const projectTracks: ProjectTrack[] = [
     label: 'React Native',
     color: 'rn',
     blurb:
-      'Five apps, five deliberately different state-management approaches — a portfolio built to show independent architectural judgment, not one template copy-pasted five times.',
+      'Five apps, five deliberately different state-management approaches. A portfolio built to show independent architectural judgment, not one template copy-pasted five times.',
     projects: [
       {
         id: 'meridian',
         name: 'Meridian',
         tagline: 'Offline-first field inspections with CRDT sync',
         description:
-          'A field-inspection app with a dynamic form builder, photo capture with GPS tagging, and a Yjs-based CRDT sync engine that resolves conflicts between two offline clients automatically. State lives entirely in WatermelonDB\'s reactive queries — no client state library at all.',
+          'A field-inspection app with a dynamic form builder, photo capture with GPS tagging, and a Yjs-based CRDT sync engine that resolves conflicts between two offline clients automatically. State lives entirely in WatermelonDB\'s reactive queries, with no client state library at all.',
         stack: ['React Native', 'WatermelonDB', 'Yjs (CRDT)', 'TypeScript'],
         url: 'https://github.com/sabarinath-m/meridian-app',
         urlLabel: 'View source',
@@ -173,7 +173,7 @@ export const projectTracks: ProjectTrack[] = [
         name: 'Kinetiq',
         tagline: 'Live pose-tracking rep counter',
         description:
-          'Tracks joints live via an ML Kit/Vision native frame processor and counts reps with a hysteresis-based joint-angle state machine — all per-frame data stays in Reanimated shared values so the 30fps pose stream never triggers a React re-render.',
+          'Tracks joints live via an ML Kit/Vision native frame processor and counts reps with a hysteresis-based joint-angle state machine. All per-frame data stays in Reanimated shared values, so the 30fps pose stream never triggers a React re-render.',
         stack: ['React Native', 'VisionCamera', 'ML Kit Pose Detection', 'Reanimated', 'Skia'],
         url: 'https://github.com/sabarinath-m/Kinetiq-app',
         urlLabel: 'View source',
@@ -184,7 +184,7 @@ export const projectTracks: ProjectTrack[] = [
         name: 'Ritual',
         tagline: 'Production-grade habit tracker, Turborepo monorepo',
         description:
-          'A habit tracker built as a proper monorepo — shared UI and config packages, feature flags, Sentry, Fastlane release automation and ADRs documenting real decisions, including a Recoil-to-Jotai migration forced by a React 19 incompatibility caught on-device.',
+          'A habit tracker built as a proper monorepo, with shared UI and config packages, feature flags, Sentry, Fastlane release automation and ADRs documenting real decisions, including a Recoil-to-Jotai migration forced by a React 19 incompatibility caught on-device.',
         stack: ['React Native', 'Turborepo', 'Jotai', 'Fastlane', 'Sentry'],
         url: 'https://github.com/sabarinath-m/ritual-app',
         urlLabel: 'View source',
@@ -195,7 +195,7 @@ export const projectTracks: ProjectTrack[] = [
         name: 'Offledger',
         tagline: 'On-device receipt scanner and expense classifier',
         description:
-          'Photographs a receipt, runs on-device OCR, then a pure heuristic layer parses vendor/date/total and a keyword classifier suggests a category — every field stays editable, nothing is auto-saved, and nothing ever leaves the phone.',
+          'Photographs a receipt, runs on-device OCR, then a pure heuristic layer parses vendor/date/total and a keyword classifier suggests a category. Every field stays editable, nothing is auto-saved, and nothing ever leaves the phone.',
         stack: ['React Native', 'ML Kit OCR', 'Context + useReducer', 'TypeScript'],
         url: 'https://github.com/sabarinath-m/offledger-app',
         urlLabel: 'View source',
@@ -208,14 +208,14 @@ export const projectTracks: ProjectTrack[] = [
     label: 'Golang',
     color: 'go',
     blurb:
-      'The backend half of full-stack ownership — Go services that hold up under real concurrency, not just REST wrappers.',
+      'The backend half of full-stack ownership. Go services that hold up under real concurrency, not just REST wrappers.',
     projects: [
       {
         id: 'go-tunnel',
         name: 'Go Tunnel',
         tagline: 'A self-hosted ngrok, written from scratch',
         description:
-          'Exposes a local dev server to the internet through your own domain — a Go server on any VPS auto-provisions Let\'s Encrypt TLS and proxies subdomain traffic over WebSockets to a lightweight client, with a live request-inspector dashboard for debugging traffic in real time.',
+          'Exposes a local dev server to the internet through your own domain. A Go server on any VPS auto-provisions Let\'s Encrypt TLS and proxies subdomain traffic over WebSockets to a lightweight client, with a live request-inspector dashboard for debugging traffic in real time.',
         stack: ['Go', 'Gorilla WebSocket', 'Let\'s Encrypt / autocert', 'Docker'],
         url: 'https://github.com/sabarinath-m/go-tunnel',
         urlLabel: 'View source',
@@ -226,14 +226,14 @@ export const projectTracks: ProjectTrack[] = [
     key: 'flutter',
     label: 'Flutter',
     color: 'flutter',
-    blurb: 'A published, actively-maintained package — not just a demo repo.',
+    blurb: 'A published, actively-maintained package, not just a demo repo.',
     projects: [
       {
         id: 'alphabet-slider',
         name: 'Alphabet Slider',
         tagline: 'Published Flutter package · 160/160 pub points',
         description:
-          'A contacts-app-style alphabet index for scrollable lists — drag or tap a letter to jump straight to that section. Published on pub.dev under a verified publisher with a perfect pub score, full docs, and support across all six Flutter platforms.',
+          'A contacts-app-style alphabet index for scrollable lists. Drag or tap a letter to jump straight to that section. Published on pub.dev under a verified publisher with a perfect pub score, full docs, and support across all six Flutter platforms.',
         stack: ['Flutter', 'Dart'],
         url: 'https://pub.dev/packages/alphabet_slider',
         urlLabel: 'View on pub.dev',
@@ -261,11 +261,11 @@ export const skillGroups: SkillGroup[] = [
 export const education = {
   degree: 'B.Tech, Computer Science and Engineering',
   institution: 'Mar Athanasius College of Engineering',
-  period: '2016 — 2020',
+  period: '2016 - 2020',
   detail: 'CGPA 8.46',
   achievement: {
     title: 'College Training & Placement Cell Platform',
     description:
-      'Built and implemented a recruitment-drive platform for the college Training & Placement Cell, later adopted for an actual campus recruitment drive — awarded a certificate of recognition for the implementation.',
+      'Built and implemented a recruitment-drive platform for the college Training & Placement Cell, later adopted for an actual campus recruitment drive. Awarded a certificate of recognition for the implementation.',
   },
 };

@@ -10,7 +10,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Experience"
           title="Six years of full product ownership"
-          description="One company, four-plus products, and a role that kept expanding — from React, into React Native, into the Go services behind both."
+          description="One company, four-plus products, and a role that kept expanding, from React, into React Native, into the Go services behind both."
         />
 
         <Reveal className="grid md:grid-cols-[220px_1fr] gap-8 mb-16">
@@ -40,7 +40,7 @@ export function Experience() {
         <Reveal>
           <h3 className="text-lg font-semibold text-ink mb-1">Products I've shipped</h3>
           <p className="text-sm text-ink-faint mb-6">
-            Case studies from the products above — each spans web, mobile, or both.
+            Case studies from the products above. Each spans web, mobile, or both.
           </p>
         </Reveal>
 
