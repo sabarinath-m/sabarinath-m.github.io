@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { Mail } from 'lucide-react';
 import { profile } from '../data/profile';
 import { Reveal } from './Reveal';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
+import { ContactModal } from './ContactModal';
 
 export function Contact() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section id="contact" className="px-6 py-28 border-t border-line">
       <Reveal className="max-w-3xl mx-auto text-center">
@@ -17,12 +21,12 @@ export function Contact() {
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-5 py-3 hover:bg-accent transition-colors"
+          <button
+            onClick={() => setContactOpen(true)}
+            className="inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-5 py-3 hover:bg-accent transition-colors cursor-pointer"
           >
-            <Mail size={16} /> {profile.email}
-          </a>
+            <Mail size={16} /> Get in touch
+          </button>
           <a
             href={profile.links.github}
             target="_blank"
@@ -46,6 +50,8 @@ export function Contact() {
         <span>© {new Date().getFullYear()} {profile.name}</span>
         <span>Built with React, TypeScript & Tailwind</span>
       </div>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </section>
   );
 }

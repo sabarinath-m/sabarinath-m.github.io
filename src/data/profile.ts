@@ -12,6 +12,7 @@ export const profile = {
   tagline:
     "I take products from a blank screen to production — React and React Native on the front end, Go services behind them, and full ownership of everything in between.",
   email: 'sabarinath.m97@gmail.com',
+  phone: '+91 98463 60800',
   links: {
     github: 'https://github.com/sabarinath-m',
     linkedin: 'https://linkedin.com/in/sabarinath-m',

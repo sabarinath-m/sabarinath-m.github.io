@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
 import { profile } from '../data/profile';
 import { RotatingRole } from './RotatingRole';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
+import { ContactModal } from './ContactModal';
 
 export function Hero() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section
       id="home"
@@ -29,13 +33,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-sm font-medium text-ink-faint tracking-wide mb-5 flex items-center gap-2"
+          className="text-sm font-medium text-ink-faint tracking-wide mb-5"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-          </span>
-          Open to new opportunities · {profile.location}
+          {profile.location}
         </motion.p>
 
         <motion.h1
@@ -71,12 +71,12 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="mt-9 flex flex-wrap items-center gap-3"
         >
-          <a
-            href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-5 py-3 hover:bg-accent transition-colors"
+          <button
+            onClick={() => setContactOpen(true)}
+            className="inline-flex items-center gap-2 rounded-full bg-ink text-paper text-sm font-medium px-5 py-3 hover:bg-accent transition-colors cursor-pointer"
           >
             <Mail size={16} /> Get in touch
-          </a>
+          </button>
           <a
             href={profile.links.github}
             target="_blank"
@@ -120,6 +120,8 @@ export function Hero() {
       >
         <ArrowDown size={20} />
       </motion.button>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </section>
   );
 }
