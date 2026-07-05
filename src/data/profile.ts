@@ -38,13 +38,15 @@ export const experience: Experience = {
   summary:
     'Six years as the frontend and, increasingly, full-stack owner across four-plus production products — hired for React, trusted to ship React Native, and extended into Go backend services because the fastest way to unblock a feature was to own the whole path.',
   highlights: [
-    'Sole frontend owner on multiple products from zero to production, later extending ownership into Golang REST APIs and PostgreSQL schemas to ship features end-to-end without cross-team handoff delays.',
+    'Led React web development across 4+ production products — a seller console for an e-commerce platform at 1M+-user scale, and a dashboard for a FinTech platform serving 15K+ active users and enterprise clients — later extending ownership into Golang REST APIs and PostgreSQL schemas to ship end-to-end without cross-team handoff delays.',
     'Architected React Native codebases with modular state management and reusable component libraries adopted across 4+ projects, cutting new-project setup time.',
-    'Engineered high-performance UIs with Reanimated and Gesture Handler, delivering native-quality experiences from a single codebase on Android and iOS.',
-    'Built offline-first workflows with local data sync, background tasks, and barcode scanning for field-operations teams.',
-    'Set up a CodePush-based hotfix pipeline shipping critical fixes to production within minutes, bypassing multi-day app store review cycles.',
+    'Optimised React app performance across browsers and devices through profiling and code-splitting, improving load times for production users.',
+    'Engineered high-performance React Native UIs with Reanimated and Gesture Handler, delivering native-quality experiences from a single codebase on Android and iOS.',
+    'Built reusable React component libraries and a Flutter boilerplate adopted across the engineering team, cutting new-feature development time across 4+ projects.',
+    'Built offline-first React Native workflows with local data sync, background tasks, and barcode scanning for field-operations teams.',
+    'Built deep linking, push notification, and analytics instrumentation across React and React Native apps, improving engagement and re-engagement in production.',
+    'Set up a CodePush-based hotfix pipeline shipping critical React Native fixes to production within minutes, bypassing multi-day app store review cycles.',
     'Led code reviews and mentored engineers across React, React Native, Flutter, and Golang — set frontend/mobile architecture standards team-wide.',
-    'Owned release management across the App Store and Play Store, coordinating phased rollouts and production monitoring.',
   ],
 };
 
