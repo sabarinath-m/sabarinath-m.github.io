@@ -16,7 +16,7 @@ Components under `src/components/` render this data — they don't hardcode copy
 anything (a bullet point, a project link, a new case study, a stat), edit `profile.ts`;
 no component changes needed unless you're adding a new *kind* of content.
 
-- `profile` — name, rotating hero titles, tagline, contact links, hero stats
+- `profile` — name, title, tagline, contact links, hero stats
 - `experience` — the current role and its highlight bullets
 - `caseStudies` — company product case studies shown under Experience
 - `projectTracks` — personal projects, grouped by stack (React / React Native / Golang / Flutter)
@@ -37,7 +37,6 @@ npm run lint      # oxlint
 - lucide-react in this project's installed version doesn't ship brand/logo icons
   (GitHub, LinkedIn) — those are small inline SVGs in
   [`src/components/BrandIcons.tsx`](src/components/BrandIcons.tsx) instead.
-- Section reveal-on-scroll animations use Framer Motion's `whileInView`; the rotating
-  hero role text and nav underline use `layoutId`/`AnimatePresence`. All respect normal
-  browser tab visibility — animations resume as expected once a backgrounded tab regains
-  focus.
+- Section reveal-on-scroll animations use Framer Motion's `whileInView`; the nav
+  underline uses `layoutId`/`AnimatePresence`. All respect normal browser tab
+  visibility — animations resume as expected once a backgrounded tab regains focus.

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
 import { profile } from '../data/profile';
-import { RotatingRole } from './RotatingRole';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
 import { ContactModal } from './ContactModal';
 
@@ -42,9 +41,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-4 text-2xl sm:text-3xl md:text-4xl font-medium text-ink-soft tracking-tight"
+          className="mt-4 text-2xl sm:text-3xl md:text-4xl font-medium text-accent tracking-tight"
         >
-          <RotatingRole roles={profile.roles} />
+          {profile.title}
         </motion.div>
 
         <motion.p

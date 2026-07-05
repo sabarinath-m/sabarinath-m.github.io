@@ -3,11 +3,7 @@
 
 export const profile = {
   name: 'Sabarinath M',
-  roles: [
-    'Frontend Engineer, React',
-    'React Native Engineer',
-    'Full-Stack Product Engineer',
-  ],
+  title: 'Senior Full-Stack Product Engineer',
   location: 'Kochi, India',
   tagline:
     "I take products from a blank screen to production — React and React Native on the front end, Go services behind them, and full ownership of everything in between.",
