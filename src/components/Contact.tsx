@@ -46,9 +46,8 @@ export function Contact() {
         </div>
       </Reveal>
 
-      <div className="mt-20 pt-8 border-t border-line max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-ink-faint">
+      <div className="mt-20 pt-8 border-t border-line max-w-5xl mx-auto text-center text-sm text-ink-faint">
         <span>© {new Date().getFullYear()} {profile.name}</span>
-        <span>Built with React, TypeScript & Tailwind</span>
       </div>
 
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />

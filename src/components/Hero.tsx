@@ -29,15 +29,6 @@ export function Hero() {
       />
 
       <div className="max-w-5xl mx-auto w-full relative">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-sm font-medium text-ink-faint tracking-wide mb-5"
-        >
-          {profile.location}
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
