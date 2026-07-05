@@ -1,7 +1,56 @@
-import { useEffect } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Mail, Phone, X } from 'lucide-react';
+import { Check, Copy, Mail, Phone, X } from 'lucide-react';
 import { profile } from '../data/profile';
+
+function CopyRow({
+  icon,
+  label,
+  value,
+}: {
+  icon: ReactNode;
+  label: string;
+  value: string;
+}) {
+  const [copied, setCopied] = useState(false);
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch {
+      // Clipboard API unavailable/denied — fall back to the legacy
+      // execCommand path so the button still works.
+      const textarea = document.createElement('textarea');
+      textarea.value = value;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1800);
+  };
+
+  return (
+    <button
+      onClick={copy}
+      className="flex items-center gap-3 rounded-xl border border-line px-4 py-3 hover:border-accent hover:bg-accent-soft transition-colors group cursor-pointer text-left w-full"
+    >
+      <span className="shrink-0 w-9 h-9 rounded-full bg-accent-soft text-accent-ink flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
+        {icon}
+      </span>
+      <span className="flex-1">
+        <span className="block text-xs text-ink-faint">{label}</span>
+        <span className="block text-sm font-medium text-ink">{value}</span>
+      </span>
+      <span className="shrink-0 text-ink-faint group-hover:text-accent transition-colors">
+        {copied ? <Check size={16} className="text-emerald-600" /> : <Copy size={16} />}
+      </span>
+    </button>
+  );
+}
 
 export function ContactModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   useEffect(() => {
@@ -50,34 +99,11 @@ export function ContactModal({ open, onClose }: { open: boolean; onClose: () => 
             </button>
 
             <h3 className="text-lg font-semibold text-ink pr-6">Let's talk</h3>
-            <p className="text-sm text-ink-soft mt-1 mb-5">Reach out directly, whichever's easier.</p>
+            <p className="text-sm text-ink-soft mt-1 mb-5">Tap to copy either one.</p>
 
             <div className="flex flex-col gap-3">
-              <a
-                href={`mailto:${profile.email}`}
-                className="flex items-center gap-3 rounded-xl border border-line px-4 py-3 hover:border-accent hover:bg-accent-soft transition-colors group"
-              >
-                <span className="shrink-0 w-9 h-9 rounded-full bg-accent-soft text-accent-ink flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
-                  <Mail size={16} />
-                </span>
-                <span className="text-left">
-                  <span className="block text-xs text-ink-faint">Email</span>
-                  <span className="block text-sm font-medium text-ink">{profile.email}</span>
-                </span>
-              </a>
-
-              <a
-                href={`tel:${profile.phone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-3 rounded-xl border border-line px-4 py-3 hover:border-accent hover:bg-accent-soft transition-colors group"
-              >
-                <span className="shrink-0 w-9 h-9 rounded-full bg-accent-soft text-accent-ink flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors">
-                  <Phone size={16} />
-                </span>
-                <span className="text-left">
-                  <span className="block text-xs text-ink-faint">Phone</span>
-                  <span className="block text-sm font-medium text-ink">{profile.phone}</span>
-                </span>
-              </a>
+              <CopyRow icon={<Mail size={16} />} label="Email" value={profile.email} />
+              <CopyRow icon={<Phone size={16} />} label="Phone" value={profile.phone} />
             </div>
           </motion.div>
         </motion.div>
